@@ -17,7 +17,7 @@ public class Banking {
 			if(accountLoc!=-1){
 				Validate v = new Validate(accounts.get(accountLoc));
 			
-				if(accountLoc!=-1&&v.execute())
+				if(v.execute())
 					execute(accounts.get(accountLoc));
 			}
 		}
