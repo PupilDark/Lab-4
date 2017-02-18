@@ -50,6 +50,10 @@ public class Banking {
 	public static void execute(Account a){
 		System.out.print("W for Withdrawl. D for Desposit. ");
 		String temp = stdIn.next();
+		while(!temp.equalsIgnoreCase("W")&&!temp.equalsIgnoreCase("D")){
+			System.out.print("W for Withdrawl. D for Desposit. ");
+			temp = stdIn.next();
+		}
 		if(temp.equalsIgnoreCase("W")){
 			Withdrawl w = new Withdrawl(a);
 			w.execute();
@@ -57,8 +61,6 @@ public class Banking {
 		else if(temp.equalsIgnoreCase("D")){
 			Deposit d = new Deposit(a);
 			d.execute();
-
 		}
 	}
-
 }
