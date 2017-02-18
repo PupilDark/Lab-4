@@ -14,10 +14,11 @@ public class Banking {
 		
 		while(true){
 			int accountLoc = bank.start();
-			Validate v = new Validate(accounts.get(accountLoc));
+			if(accountLoc!=-1){
+				Validate v = new Validate(accounts.get(accountLoc));
 			
-			if(accountLoc!=-1&&v.execute()){
-				execute(accounts.get(accountLoc));
+				if(accountLoc!=-1&&v.execute())
+					execute(accounts.get(accountLoc));
 			}
 		}
 		
